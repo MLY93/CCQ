@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clara's Code Quest - Coming Soon</title>
@@ -8,8 +11,21 @@
       #mc_embed_signup {
         width: 100%;
         display: flex;
+      }
+      #mc_embed_signup .button {
+        background-color: #f9a85c;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        justify-self: flex-end;
+      }
 
-
+      #mc_embed_signup .button:hover {
+        background-color: #f28b3e;
       }
       #mc_embed_shell {
         display: flex;
@@ -28,7 +44,7 @@
 
       body {
         margin: 0;
-        font-family: "Segoe UI", sans-serif;
+        font-family: "Raleway", sans-serif;
         background: #0b274a;
         color: white;
         display: flex;
