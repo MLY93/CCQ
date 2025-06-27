@@ -239,12 +239,20 @@
           width: 100%;
           max-width: 400px;
           position: relative;
+          width: 100%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         /* 4. Resize image responsively */
         .carousel img {
+          aspect-ratio: 1 / 1;
           width: 100%;
           height: auto;
+          max-height: 100%;
+          object-fit: cover;
           display: block;
         }
 
