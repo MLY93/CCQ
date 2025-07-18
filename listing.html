@@ -2,7 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <!-- Open Graph / Link Preview -->
+    <meta
+      property="og:title"
+      content="Clara's Code Quest – A Tech Adventure for Kids"
+    />
+    <meta
+      property="og:description"
+      content="Join Clara, Byte, and Pixel on a vibrant, coding-powered journey to save Techtopia!"
+    />
+    <meta
+      property="og:image"
+      content="https://clarascodequest.netlify.app/1.png"
+    />
+    <meta property="og:url" content="https://clarascodequest.com/" />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -13,7 +33,7 @@
     <style>
       body {
         margin: 0;
-        font-family: "Segoe UI", sans-serif;
+        font-family: "Raleway", sans-serif;
         background: #041b3d;
         background-image: url("./2.png");
         color: #ffffff;
@@ -109,6 +129,7 @@
 
       .buy-container {
         display: flex;
+        padding: 10px 0;
         justify-content: center;
         flex-direction: column;
         gap: 1rem;
@@ -213,6 +234,76 @@
         flex-direction: column;
       }
 
+      .quantity-wrapper {
+        font-family: "Arial Rounded MT Bold", "Poppins", sans-serif;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      .quantity-stepper {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        border: 2px solid #f97316; /* orange-500 */
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #1c1c1e;
+        width: fit-content;
+      }
+
+      #quantity {
+        width: 3rem;
+        text-align: center;
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        appearance: textfield;
+      }
+
+      .step-btn {
+        all: unset; /* resets all inherited styles */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        background: #f97316;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        border: none;
+      }
+
+      .step-btn:hover {
+        background: #fb923c;
+      }
+
+      .step-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      /* Hide arrows for Chrome, Safari, Edge, Opera */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Hide arrows for Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
       @media (max-width: 768px) {
         /* 1. Ensure the product container is constrained */
         .product-container {
@@ -302,6 +393,62 @@
         .product-description {
           margin-top: 20px;
         }
+
+        .quantity-wrapper {
+          font-family: "Arial Rounded MT Bold", "Poppins", sans-serif;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          font-size: 0.9rem;
+        }
+
+        .quantity-stepper {
+          display: flex;
+          align-items: center;
+          border: 2px solid #f97316; /* orange-500 */
+          border-radius: 8px;
+          overflow: hidden;
+          background-color: #1c1c1e;
+          width: fit-content;
+        }
+
+        #quantity {
+          width: 3rem;
+          text-align: center;
+          border: none;
+          background: transparent;
+          color: white;
+          font-size: 1rem;
+          font-weight: 600;
+          appearance: textfield;
+        }
+
+        .step-btn {
+          all: unset; /* resets all inherited styles */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.2rem;
+          height: 2.2rem;
+          background: #f97316;
+          color: white;
+          font-weight: bold;
+          font-size: 1.2rem;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background 0.2s ease;
+          border: none;
+        }
+
+        .step-btn:hover {
+          background: #fb923c;
+        }
+
+        .step-btn:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
       }
     </style>
   </head>
@@ -338,6 +485,20 @@
           <h1 id="product-title">Loading...</h1>
           <div class="price" id="product-price"></div>
           <div>Signed First Edition</div>
+          <div class="quantity-wrapper">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-stepper">
+              <button type="button" class="step-btn" id="decrease">−</button>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button type="button" class="step-btn" id="increase">+</button>
+            </div>
+          </div>
           <button class="buy-button" id="buy-button" onclick="buyNow()">
             Buy Now
           </button>
@@ -355,6 +516,16 @@
       const productHandle = "claras-code-quest";
       let variantId = null;
 
+      const input = document.getElementById("quantity");
+      document.getElementById("increase").onclick = () => {
+        input.value = parseInt(input.value);
+      };
+      document.getElementById("decrease").onclick = () => {
+        if (parseInt(input.value) > 1) {
+          input.value = parseInt(input.value) - 1;
+        }
+      };
+
       async function fetchProduct() {
         const query = `{
         productByHandle(handle: "${productHandle}") {
@@ -366,7 +537,7 @@
       }`;
 
         const res = await fetch(
-          `https://${shopDomain}/api/2023-01/graphql.json`,
+          `https://${shopDomain}/api/2024-04/graphql.json`,
           {
             method: "POST",
             headers: {
@@ -384,7 +555,6 @@
           product.descriptionHtml;
         const variant = json.data.productByHandle.variants.edges[0].node;
         const isAvailable = variant.availableForSale;
-        console.log("isAvailable", isAvailable);
 
         const buyButton = document.getElementById("buy-button");
         if (!isAvailable) {
@@ -395,24 +565,52 @@
           "product-price"
         ).innerText = `${product.variants.edges[0].node.price.amount} ${product.variants.edges[0].node.price.currencyCode}`;
         variantId = product.variants.edges[0].node.id;
-        console.log("variantId", variantId);
       }
 
       fetchProduct();
 
+      let quantity = 1; // default
+
+      const quantityInput = document.getElementById("quantity");
+
+      quantityInput.addEventListener("input", (e) => {
+        quantity = parseInt(e.target.value, 10) || 1; // fallback to 1 if empty/invalid
+      });
+
+      const increaseBtn = document.getElementById("increase");
+      const decreaseBtn = document.getElementById("decrease");
+
+      increaseBtn.addEventListener("click", () => {
+        let current = parseInt(quantityInput.value, 10) || 1;
+        quantityInput.value = current + 1;
+      });
+
+      decreaseBtn.addEventListener("click", () => {
+        let current = parseInt(quantityInput.value, 10) || 1;
+        if (current > 1) {
+          quantityInput.value = current - 1;
+        }
+      });
+
       async function buyNow() {
+        const quantity =
+          parseInt(document.getElementById("quantity").value, 10) || 1;
         const mutation = `mutation {
     cartCreate(input: {
       lines: [
         {
-          quantity: 1
           merchandiseId: "${variantId}"
+          quantity: ${quantity},
         }
       ]
     }) {
       cart {
         id
         checkoutUrl
+      }
+        userErrors {
+        field
+        message
       }
     }
   }
@@ -443,14 +641,12 @@
       ];
 
       let currentIndex = 0;
-      console.log("currentIndex", currentIndex);
       const imgElement = document.getElementById("carousel-image");
       const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
 
       function renderImageCarousel() {
         imgElement.src = imageUrls[currentIndex];
         thumbnails.forEach((thumb, i) => {
-          console.log("active", i === currentIndex);
           thumb.classList.toggle("active", i === currentIndex);
         });
       }
