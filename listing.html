@@ -516,16 +516,6 @@
       const productHandle = "claras-code-quest";
       let variantId = null;
 
-      const input = document.getElementById("quantity");
-      document.getElementById("increase").onclick = () => {
-        input.value = parseInt(input.value);
-      };
-      document.getElementById("decrease").onclick = () => {
-        if (parseInt(input.value) > 1) {
-          input.value = parseInt(input.value) - 1;
-        }
-      };
-
       async function fetchProduct() {
         const query = `{
         productByHandle(handle: "${productHandle}") {
