@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="./1.png">
-    <link rel="preload" as="image" href="./2.png">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <!-- Open Graph / Link Preview -->
-<meta property="og:title" content="Clara's Code Quest – A Tech Adventure for Kids" />
-<meta property="og:description" content="Join Clara, Byte, and Pixel on a vibrant, coding-powered journey to save Techtopia!" />
-<meta property="og:image" content="https://clarascodequest.netlify.app/1.png" />
-<meta property="og:url" content="https://clarascodequest.com/" />
-<meta property="og:type" content="website" />
     <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <!-- Open Graph / Link Preview -->
+    <meta
+      property="og:title"
+      content="Clara's Code Quest – A Tech Adventure for Kids"
+    />
+    <meta
+      property="og:description"
+      content="Join Clara, Byte, and Pixel on a vibrant, coding-powered journey to save Techtopia!"
+    />
+    <meta
+      property="og:image"
+      content="https://clarascodequest.netlify.app/1.png"
+    />
+    <meta property="og:url" content="https://clarascodequest.com/" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clara's Code Quest - Coming Soon</title>
+    <title>Clara's Code Quest</title>
     <style>
       #mc_embed_signup {
         width: 100%;
@@ -45,51 +59,12 @@
       #mce-EMAIL {
         text-align: left;
       }
-      #mc-field-group {
+      .mc-field-group {
         text-align: left;
         width: 100%;
         margin-bottom: 20px;
       }
 
-      body {
-        margin: 0;
-        font-family: "Raleway", sans-serif;
-        background: #0b274a;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* min-height: 100vh; */
-        background-image: url("./2.png");
-        background-size: cover;
-        background-position: center;
-      }
-      .container {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 40px;
-        border-radius: 12px;
-        text-align: center;
-        max-width: 500px;
-        width: 90%;
-      }
-      .container img {
-        width: 100%;
-        border-radius: 12px;
-        margin-bottom: 10px;
-      }
-      h1 {
-        font-size: 2rem;
-        color: #f9a85c;
-      }
-      h2 {
-        margin-top: 10px;
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-      }
       #mce-EMAIL {
         padding: 10px;
         font-size: 1rem;
@@ -112,33 +87,678 @@
       #mc-embedded-subscribe:hover {
         background-color: #f28b3e;
       }
+
+      body {
+        margin: 0;
+        font-family: "Raleway", sans-serif;
+        background: #041b3d;
+        background-image: url("./2.png");
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        box-sizing: border-box;
+      }
+
+      .product-container {
+        align-items: stretch;
+        display: flex;
+        gap: 5rem;
+        background-color: #0a2c5e;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 30px 25px;
+        text-align: left;
+      }
+
+      .product-container img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        /* font-family: "Fredoka", sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            text-align: center;
+
+            background: linear-gradient(to right, #ff9100, #ffc400);
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            color: transparent;
+            -webkit-text-fill-color: transparent; Required for WebKit */
+        font-family: "Fredoka", sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+
+        background: linear-gradient(
+          90deg,
+          #ff6600 0%,
+          #ff9900 35%,
+          #ffc400 65%,
+          #ffd966 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .price {
+        font-size: 1.2em;
+        margin: 15px 0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .description {
+        font-size: 1em;
+        color: #d0e1ff;
+        margin-bottom: 20px;
+      }
+
+      .buy-button {
+        background: linear-gradient(to bottom, #ff9100, #ff6700);
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.2s;
+        width: 100%;
+        max-width: 240px;
+        margin: 12px auto;
+        display: block;
+      }
+
+      .buy-button:hover {
+        background: linear-gradient(to bottom, #ffab40, #ff9100);
+        transform: translateY(-2px);
+      }
+
+      .buy-container {
+        display: flex;
+        padding: 10px 0;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 30px;
+        background: transparent;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(3px);
+        z-index: 10;
+      }
+
+      .carousel-wrapper {
+        display: flex;
+        position: sticky;
+        top: 30px;
+        margin-top: 0;
+        padding-top: 0;
+        align-self: flex-start;
+        flex-direction: column;
+        max-width: 500px;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        background: #0e2a56;
+        border-radius: 12px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        font-size: 26px;
+        border: none;
+        padding: 8px 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        z-index: 10;
+      }
+
+      .carousel-btn.prev {
+        left: 10px;
+      }
+      .carousel-btn.next {
+        right: 10px;
+      }
+
+      .carousel-btn:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .carousel-thumbnails {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr; /* each item takes equal space */
+        gap: 16px;
+        margin-top: 12px;
+      }
+
+      .carousel-thumbnails img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+      }
+
+      .carousel-thumbnails img.active,
+      .carousel-thumbnails img:hover {
+        border-color: #ff9900;
+      }
+
+      .carousel-caption {
+        font-size: 0.9rem;
+        color: #ccc;
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      .product-details {
+        display: flex;
+        max-width: 600px;
+        flex-direction: column;
+      }
+
+      .quantity-wrapper {
+        font-family: "Arial Rounded MT Bold", "Poppins", sans-serif;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      .quantity-stepper {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        border: 2px solid #f97316; /* orange-500 */
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #1c1c1e;
+        width: fit-content;
+      }
+
+      #quantity {
+        width: 3rem;
+        text-align: center;
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        appearance: textfield;
+      }
+
+      .step-btn {
+        all: unset; /* resets all inherited styles */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        background: #f97316;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        border: none;
+      }
+
+      .step-btn:hover {
+        background: #fb923c;
+      }
+
+      .step-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      /* Hide arrows for Chrome, Safari, Edge, Opera */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Hide arrows for Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      @media (max-width: 768px) {
+        /* 1. Ensure the product container is constrained */
+        .product-container {
+          width: 100%;
+          max-width: 400px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .carousel-wrapper {
+          width: 100%;
+          display: flex;
+          max-width: 500px;
+          margin: 0 auto;
+          justify-content: center;
+          flex-direction: row !important;
+          position: static !important;
+        }
+
+        .carousel {
+          width: 100%;
+          max-width: 400px;
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* 4. Resize image responsively */
+        .carousel img {
+          aspect-ratio: 1 / 1;
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* 5. Fix arrow buttons so they don't overflow */
+        .carousel-btn {
+          top: 30%;
+          transform: translateY(-50%);
+          z-index: 2;
+        }
+
+        .carousel-thumbnails {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-flow: unset;
+          gap: 8px;
+        }
+
+        .carousel-thumbnails img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .product-title {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+
+        .price,
+        .edition-badge {
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        .buy-button {
+          width: 100%;
+          max-width: 320px;
+          margin: 12px auto;
+          font-size: 1rem;
+        }
+
+        .sticky-cta {
+          position: static; /* turn off sticky */
+          background: none;
+          padding-bottom: 12px;
+        }
+
+        .product-description {
+          margin-top: 20px;
+        }
+
+        .quantity-wrapper {
+          font-family: "Arial Rounded MT Bold", "Poppins", sans-serif;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          font-size: 0.9rem;
+        }
+
+        .quantity-stepper {
+          display: flex;
+          align-items: center;
+          border: 2px solid #f97316; /* orange-500 */
+          border-radius: 8px;
+          overflow: hidden;
+          background-color: #1c1c1e;
+          width: fit-content;
+        }
+
+        #quantity {
+          width: 3rem;
+          text-align: center;
+          border: none;
+          background: transparent;
+          color: white;
+          font-size: 1rem;
+          font-weight: 600;
+          appearance: textfield;
+        }
+
+        .step-btn {
+          all: unset; /* resets all inherited styles */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.2rem;
+          height: 2.2rem;
+          background: #f97316;
+          color: white;
+          font-weight: bold;
+          font-size: 1.2rem;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background 0.2s ease;
+          border: none;
+        }
+
+        .step-btn:hover {
+          background: #fb923c;
+        }
+
+        .step-btn:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <img src="./1.png" alt="Clara's Code Quest Cover" />
-      <h1>Coming Soon!</h1>
-      <h2>Clara’s Code Quest</h2>
-      <p>
-        A tech-powered adventure book for curious kids!<br />
-        Join Clara, Byte the robot, and Pixel the sprite as they journey through
-        Techtopia — and save the digital world from The Great Glitch.<br />
-        For kids ages 4–8.
-      </p>
-      <!-- <form action="#" method="post">
-        <input
-          type="email"
-          placeholder="type your email here..."
-          required
-        /><br />
-        <button type="submit">Submit</button>
-      </form> -->
-      <div id="mc_embed_shell">
-        <style>
-          /* #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;} */
-          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
+    <div class="product-container">
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <button class="carousel-btn prev" onclick="prevImage()">‹</button>
+          <img id="carousel-image" src="./1.png" alt="Book image" />
+          <button class="carousel-btn next" onclick="nextImage()">›</button>
+          <div class="carousel-thumbnails">
+            <img src="./1.png" alt="Cover thumbnail" onclick="goToImage(0)" />
+            <img
+              src="./back.png"
+              alt=" Back Cover thumbnail"
+              onclick="goToImage(1)"
+            />
+            <img src="./map.png" alt="Map thumbnail" onclick="goToImage(2)" />
+            <img
+              src="./dedication.png"
+              alt="Dedication thumbnail"
+              onclick="goToImage(3)"
+            />
+          </div>
+
+          <div class="carousel-caption">
+            📖 Peek inside — swipe for some example pages
+          </div>
+        </div>
+      </div>
+      <div class="product-details">
+        <!-- <img id="product-image1" src="./1.png" alt="Clara's Code Quest Cover" /> -->
+        <div class="buy-container">
+          <h1 id="product-title">Loading...</h1>
+          <div class="price" id="product-price"></div>
+          <div>Signed First Edition</div>
+          <div class="quantity-wrapper">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-stepper">
+              <button type="button" class="step-btn" id="decrease">−</button>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button type="button" class="step-btn" id="increase">+</button>
+            </div>
+          </div>
+          <button class="buy-button" id="buy-button" onclick="buyNow()">
+            Buy Now
+          </button>
+          <div id="notify" />
+          <div id="error" style="color: red; margin-top: 1rem" />
+        </div>
+        <div id="product-description" class="description">
+          Join Clara, Byte the robot, and Pixel the sprite as they journey
+          through Techtopia to fix the Great Glitch! For kids ages 3–8.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const shopDomain = "qqs10f-7y.myshopify.com";
+      const storefrontAccessToken = "1e6e05ffb71af526536e3c4f4d1726f8";
+      const productHandle = "claras-code-quest";
+      let variantId = null;
+      let isAvailable = true;
+
+      async function fetchProduct() {
+        const query = `{
+        productByHandle(handle: "${productHandle}") {
+          title
+          descriptionHtml
+          images(first: 10) { edges { node { src } } }
+          variants(first: 1) { edges { node { id availableForSale price { amount currencyCode } } } }
+        }
+      }`;
+
+        const res = await fetch(
+          `https://${shopDomain}/api/2024-04/graphql.json`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Shopify-Storefront-Access-Token": storefrontAccessToken,
+            },
+            body: JSON.stringify({ query }),
+          }
+        );
+
+        const json = await res.json();
+        const product = json.data.productByHandle;
+        document.getElementById("product-title").innerText = product.title;
+        document.getElementById("product-description").innerHTML =
+          product.descriptionHtml;
+        const variant = json.data.productByHandle.variants.edges[0].node;
+        isAvailable = variant.availableForSale || false;
+
+        const buyButton = document.getElementById("buy-button");
+        if (!isAvailable) {
+          buyButton.disabled = true;
+          buyButton.textContent = "Sold Out";
+        }
+        document.getElementById(
+          "product-price"
+        ).innerText = `${product.variants.edges[0].node.price.amount} ${product.variants.edges[0].node.price.currencyCode}`;
+        variantId = product.variants.edges[0].node.id;
+      }
+
+      fetchProduct();
+
+      let quantity = 1; // default
+
+      const quantityInput = document.getElementById("quantity");
+
+      quantityInput.addEventListener("input", (e) => {
+        quantity = parseInt(e.target.value, 10) || 1; // fallback to 1 if empty/invalid
+      });
+
+      const increaseBtn = document.getElementById("increase");
+      const decreaseBtn = document.getElementById("decrease");
+
+      increaseBtn.addEventListener("click", () => {
+        let current = parseInt(quantityInput.value, 10) || 1;
+        quantityInput.value = current + 1;
+      });
+
+      decreaseBtn.addEventListener("click", () => {
+        let current = parseInt(quantityInput.value, 10) || 1;
+        if (current > 1) {
+          quantityInput.value = current - 1;
+        }
+      });
+
+      async function buyNow() {
+        const quantity =
+          parseInt(document.getElementById("quantity").value, 10) || 1;
+
+        const mutation = `mutation {
+    cartCreate(input: {
+      lines: [
+        {
+          merchandiseId: "${variantId}"
+          quantity: ${quantity},
+        }
+      ]
+    }) {
+      cart {
+        id
+        checkoutUrl
+      }
+        userErrors {
+        field
+        message
+      }
+    }
+  }
+`;
+
+        const res = await fetch(
+          `https://${shopDomain}/api/2023-01/graphql.json`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Shopify-Storefront-Access-Token": storefrontAccessToken,
+            },
+            body: JSON.stringify({ query: mutation }),
+          }
+        );
+
+        const json = await res.json();
+        const errors = json.data?.cartCreate?.userErrors;
+
+        if (errors && errors.length > 0) {
+          // Display the error to the user
+          document.getElementById("error").textContent = errors[0].message;
+          return;
+        }
+        const checkoutUrl = json.data.cartCreate.cart.checkoutUrl;
+        window.location.href = checkoutUrl;
+      }
+
+      const imageUrls = [
+        "./1.png",
+        "./back.png",
+        "./map.png",
+        "./dedication.png",
+      ];
+
+      let currentIndex = 0;
+      const imgElement = document.getElementById("carousel-image");
+      const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
+
+      function renderImageCarousel() {
+        imgElement.src = imageUrls[currentIndex];
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+        renderImageCarousel();
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+        renderImageCarousel();
+      }
+
+      function goToImage(index) {
+        currentIndex = index;
+        renderImageCarousel();
+      }
+
+      renderImageCarousel();
+
+      const script = document.createElement("script");
+      script.src =
+        "https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+      script.type = "text/javascript";
+      script.onload = function () {
+        // Mailchimp init after script loads
+        (function ($) {
+          window.fnames = new Array();
+          window.ftypes = new Array();
+          fnames[0] = "EMAIL";
+          ftypes[0] = "email";
+          fnames[1] = "FNAME";
+          ftypes[1] = "text";
+          fnames[2] = "LNAME";
+          ftypes[2] = "text";
+          fnames[3] = "ADDRESS";
+          ftypes[3] = "address";
+          fnames[4] = "PHONE";
+          ftypes[4] = "phone";
+          fnames[5] = "BIRTHDAY";
+          ftypes[5] = "birthday";
+          fnames[6] = "COMPANY";
+          ftypes[6] = "text";
+        })(jQuery);
+        var $mcj = jQuery.noConflict(true);
+      };
+
+      document.head.appendChild(script);
+
+      window.addEventListener("DOMContentLoaded", function () {
+        if (!isAvailable) {
+          document.getElementById("notify").innerHTML = `
+         <div id="mc_embed_shell">
         <div id="mc_embed_signup">
           <form
             action="https://gmail.us17.list-manage.com/subscribe/post?u=58187c74a2bcf6c21eaf842c7&amp;id=f656f64cd2&amp;f_id=001959e0f0"
@@ -148,7 +768,7 @@
             class="validate"
           >
             <div id="mc_embed_signup_scroll">
-              <h2>Be the first to get a copy — and receive exclusive early launch updates!</h2>
+              <h2>Notify Me when this is back in stock!</h2>
               <div class="mc-field-group" style="text-align: left;">
                 <label for="mce-EMAIL"
                   >Email Address <span class="asterisk">*</span></label
@@ -175,8 +795,7 @@
                 ></div>
               </div>
               <div aria-hidden="true" style="position: absolute; left: -5000px">
-                /* real people should not fill this in and expect good things -
-                do not remove this or risk form bot signups */
+                <div hidden=""><input type="hidden" name="tags" value="6488166"></div>
                 <input
                   type="text"
                   name="b_58187c74a2bcf6c21eaf842c7_f656f64cd2"
@@ -191,11 +810,10 @@
                     name="subscribe"
                     id="mc-embedded-subscribe"
                     class="button"
-                    value="Sign Up"
+                    value="Notify Me"
                   />
                   <p >
-                    <a
-                      href="http://eepurl.com/jf3E1I"
+                    <a href="http://eepurl.com/jf3E1I"
                       title="Mailchimp - email marketing made easy and fun"
                       ><span
                         style="
@@ -203,39 +821,21 @@
                           background-color: transparent;
                           border-radius: 4px;
                         "
-                        ></a>
+                      /></a>
                   </p>
                 </div>
               </div>
             </div>
           </form>
         </div>
-        <script
-          type="text/javascript"
-          src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-        ></script>
-        <script type="text/javascript">
-          (function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = "EMAIL";
-            ftypes[0] = "email";
-            fnames[1] = "FNAME";
-            ftypes[1] = "text";
-            fnames[2] = "LNAME";
-            ftypes[2] = "text";
-            fnames[3] = "ADDRESS";
-            ftypes[3] = "address";
-            fnames[4] = "PHONE";
-            ftypes[4] = "phone";
-            fnames[5] = "BIRTHDAY";
-            ftypes[5] = "birthday";
-            fnames[6] = "COMPANY";
-            ftypes[6] = "text";
-          })(jQuery);
-          var $mcj = jQuery.noConflict(true);
-        </script>
       </div>
-    </div>
+        `;
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script>
   </body>
 </html>
